@@ -1,0 +1,222 @@
+ * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      height: 115vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(,,/images/sec3.jpg);
+      background-position: center;
+      background-size: cover;
+      padding-left: 8%;
+      padding-right: 8%;
+      box-sizing: border-box;
+      padding-top: 12%; /* Added to offset the fixed navbar */
+    }
+
+    .navbar {
+      height: 10%;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8); /* Optional: to make the navbar background consistent */
+      z-index: 1000; /* Ensures the navbar stays on top */
+      padding-left: 8%;
+      padding-right: 8%;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      width: 50px;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      width: 30px;
+      cursor: pointer;
+      margin-left: 40px;
+      display: none;
+    }
+
+    nav {
+      flex: 1;
+      text-align: right;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-left: 40px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      height: 88%;
+      align-items: center;
+    }
+
+    .col {
+      flex-basis: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 50px;
+      padding-top: 2rem;
+    }
+
+    p {
+      color: gold;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+       .gradient-button {
+      display: inline-block;
+      margin-top: 2rem;
+      background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(28,5,97,1) 35%, rgba(0,212,255,1) 100%);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 30px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .gradient-button:hover {
+      background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,39,182,1) 11%, rgba(0,212,255,1) 100%);
+      transform: scale(1.05);
+    }
+
+    .gradient-button:focus {
+      outline: none;
+    }
+
+
+    .card {
+      width: 200px;
+      height: 215px;
+      display: inline-block;
+      border-radius: 10px;
+      padding: 15px 25px;
+      box-sizing: border-box;
+      cursor: pointer;
+      margin: 10px 15px;
+      background-position: center;
+      background-size: cover;
+      transition: transform 0.5s;
+    }
+
+    .card1 {
+      background-image: url('images/sec5.jpg');
+    }
+
+    .card2 {
+      background-image: url('images/sec6.jpg');
+    }
+
+    .card3 {
+      background-image: url('images/sec1.jpg');
+    }
+
+    .card4 {
+      background-image: url('images/sec4.webp');
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    h5 {
+      color: #fff;
+      text-shadow: 0 0 5px #999;
+      font-size: 18px;
+    }
+
+    .card p {
+      text-shadow: 0 0 15px #000;
+      font-size: 15px;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 5%;
+        width: 90%;
+        text-align: left;
+      }
+
+      nav ul li {
+        display: block;
+        margin: 20px 0;
+      }
+
+
+
+      .menu-icon {
+        display: block;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .col {
+        flex-basis: 50%;
+      }
+
+      h1 {
+        font-size: 70px;
+      }
+
+      p {
+        font-size: 11px;
+        line-height: 15px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .col {
+        flex-basis: 50%;
+      }
+
+      h1 {
+        font-size: 100px;
+      }
+
+      p {
+        font-size: 11px;
+        line-height: 15px;
+      }
+    }

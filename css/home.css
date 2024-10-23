@@ -1,0 +1,229 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing:border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.header{
+	min-height: 100vh;
+	width: 100%;
+	background-image:url(../images/home.jpg);
+	background-color:rgba(4,9,30,0.3);
+	background-blend-mode: darken;
+	background-position: center;
+	background-size: cover;
+	position: relative;	
+}
+
+.logo{
+    size: 600px;
+    text-decoration: none;
+}
+
+/* -------- Title -----------*/
+
+.sri{
+	font-family: "Roboto Slab", serif;
+	font-size:15vmin;
+} 
+
+
+.title{
+	width: 90%;
+	color: #fff;
+	position:absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.title h2{
+	font-size:2rem;
+	padding-top:0.625rem;
+}
+.title p{
+	font-size: 1rem;
+}
+
+
+
+
+/*-------- About Sri Lanka ----------*/
+
+.para1{
+	Width:90%;
+	margin:auto;
+	text-align:center;
+	padding-top: 3.75rem;
+}
+.para1 h2{
+	font-size: 2.5rem;
+	font-weight:500;
+	margin-bottom: 1rem;
+	
+}
+.para1 p{
+	font-size: 1.2rem;
+	font-weight: 300;
+	padding:0.6rem;
+	flex-basis:31%;
+	background:#f5f5f0;
+	border-radius: 0.6rem;
+	margin-bottom: 0.3rem;	
+	box-sizing:border-box;
+	box-shadow:0 0 10px 0px rgba(0,0,0,0.2);
+}
+.para1 iframe{
+	margin-top: 30px;
+	border-radius: 25px;
+	width: 75%;
+	height: 500px;
+}
+/*------------ interest -----------*/
+
+.interest {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 3.1rem;
+    margin-bottom: 3.1rem;
+}
+
+.interest h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+.int {
+    flex-basis: 22%;
+    border-radius: 0.6rem;
+    margin-bottom: 1.8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.int img {
+    width: 100%; /* Ensure images scale with the container */
+    display: block;
+}
+
+.int:hover {
+    box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.layer:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.layer h3 {
+    font-weight: 500;
+    color: #fff;
+    font-size: 1.6rem;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(20px); /* Start slightly below */
+}
+
+.layer p {
+    font-weight: 400;
+    color: #fff;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(20px); /* Start slightly below */
+}
+
+.layer:hover h3,
+.layer:hover p {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+
+@media (max-width: 1120px) {
+    .layer h3 {
+        font-size: 1.5rem;
+    }
+    .layer p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 1030px) {
+    .layer h3 {
+        font-size: 1.1rem;
+    }
+    .layer p {
+        font-size: 0.5rem;
+    }
+    .para1 iframe {
+        width: 90%;
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 1.8rem;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .int {
+        flex-basis: 100%; /* Full width on smaller screens */
+    }
+    .layer h3 {
+        font-size: 2rem;
+    }
+    .layer p {
+        font-size: 1rem;
+    }
+    .para1 iframe {
+        width: 90%;
+        height: 500px;
+    }
+}
+
+@media (max-width: 430px) {
+    .layer h3 {
+        font-size: 2rem;
+    }
+    .layer p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .layer h3 {
+        font-size: 1.5rem;
+    }
+    .layer p {
+        font-size: 0.7rem;
+    }
+}
+
+	
+	
+	
+
+	

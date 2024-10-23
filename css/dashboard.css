@@ -1,0 +1,276 @@
+
+/* ======================= Cards ====================== */
+.cardBox {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.cardBox .card {
+  position: relative;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardBox .card .numbers {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.cardBox .card .cardName {
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+.cardBox .card .iconBx {
+  font-size: 3.5rem;
+}
+
+.cardBox .card.card-checkin {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.cardBox .card.card-checkout {
+  background-color: #F44336;
+  color: white;
+}
+
+.cardBox .card.card-reported {
+  background-color: #FF9800;
+  color: white;
+}
+
+.cardBox .card.card-total {
+  background-color: #2196F3;
+  color: white;
+}
+
+.cardBox .card.card-checkin .numbers,
+.cardBox .card.card-checkout .numbers,
+.cardBox .card.card-reported .numbers,
+.cardBox .card.card-total .numbers,
+.cardBox .card.card-checkin .cardName,
+.cardBox .card.card-checkout .cardName,
+.cardBox .card.card-reported .cardName,
+.cardBox .card.card-total .cardName,
+.cardBox .card.card-checkin .iconBx,
+.cardBox .card.card-checkout .iconBx,
+.cardBox .card.card-reported .iconBx,
+.cardBox .card.card-total .iconBx {
+  color: white;
+}
+
+.cardBox .card:hover {
+  opacity: 0.9;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+/* ================== transaction List ============== */
+.transactions-container {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.transactions {
+    flex: 3; /* Adjust the flex value as needed */
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    
+}
+
+.recentCustomers {
+    flex: 1; /* Adjust the flex value as needed */
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    min-width: 300px;
+}
+
+.transactions .cardHeader,
+.recentCustomers .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cardHeader h2 {
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.cardHeader .btn {
+    padding: 5px 10px;
+    background: var(--blue);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.cardHeader .btn:hover {
+    background: var(--darkblue);
+}
+
+.transactions table,
+.recentCustomers table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.transactions table th,
+.transactions table td,
+.recentCustomers table th,
+.recentCustomers table td {
+    padding: 12px;
+    text-align: left;
+}
+
+.transactions table th {
+    background-color: #18FFFF;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.transactions table th:first-child,
+.recentCustomers table th:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.transactions table th:last-child,
+.recentCustomers table th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.transactions .recent table tbody tr,
+.recentCustomers table tbody tr {
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.transactions .recent table tbody tr:hover,
+.recentCustomers table tbody tr:hover {
+    background-color: #e9ecef;
+    transform: scale(1.005);
+}
+
+.transactions .recent table tr td:first-child,
+.recentCustomers table tr td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.transactions .recent table tr td:last-child,
+.recentCustomers table tr td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.status {
+    padding: 6px 10px;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+    min-width: 100px;
+}
+
+.status.checked-in {
+    background: #28a745;
+}
+
+.status.checked-out {
+    background: #dc3545;
+}
+
+.status.reported {
+    background: #ffc107;
+    color: #333;
+}
+
+.status.other {
+    background: #17a2b8;
+}
+
+.recentCustomers table tr td {
+    padding: 25px 10px;
+}
+
+.recentCustomers table tr td p {
+    font-size: 25px;
+}
+
+.recentCustomers table tr td h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2rem;
+}
+
+.recentCustomers table tr td h4 span {
+    font-size: 14px;
+    color: var(--black2);
+}
+
+.recentCustomers table tr:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.recentCustomers table tr:hover td h4 span {
+    color: var(--white);
+}
+
+/* ====================== Responsive Design ========================== */
+@media (max-width: 991px) {
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .transactions-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .transactions {
+        overflow-x: auto;
+    }
+    .status.inProgress {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cardHeader h2 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
